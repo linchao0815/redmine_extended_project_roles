@@ -14,9 +14,9 @@
 #along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class ExtendedUserProjectController < ApplicationController
-	before_filter :check_permissions, :only => [:create, :destroy]
-	before_filter :check_if_role_exists, :only => [:create]
-	before_filter :check_if_member, :only => [:create]
+	before_action :check_permissions, :only => [:create, :destroy]
+	before_action :check_if_role_exists, :only => [:create]
+	before_action :check_if_member, :only => [:create]
 
 	#Create a user-role association
 	#if an association already exists, modify it, unless role selected is -1, then destroy it

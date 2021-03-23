@@ -57,7 +57,9 @@ module ApplicationHelperPatch
 	            end
             end
 
-            alias_method_chain :principals_options_for_select, :extended_roles
+#            alias_method_chain :principals_options_for_select, :extended_roles
+			alias_method :principals_options_for_select_without_extended_roles, :principals_options_for_select
+			alias_method :principals_options_for_select, :principals_options_for_select_with_extended_roles
         end
     end
 end

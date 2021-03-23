@@ -33,8 +33,9 @@ module ProjectsControllerPatch
     			destroy_without_plugin
             end
 
-            alias_method_chain :destroy, :plugin
-
+            #alias_method_chain :destroy, :plugin
+			alias_method :destroy_without_plugin, :destroy
+			alias_method :destroy, :destroy_with_plugin
         end
     end
 end

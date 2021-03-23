@@ -13,7 +13,7 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-class CreateExtendedUserProjects < ActiveRecord::Migration
+class CreateExtendedUserProjects < ActiveRecord::Migration[5.2]
   def change
     create_table :extended_user_projects do |t|
       t.column :user_id, :integer, null: false

@@ -13,7 +13,7 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-class PopulateExtendedProjectRoles < ActiveRecord::Migration
+class PopulateExtendedProjectRoles < ActiveRecord::Migration[5.2]
   NAMES = %w(Administrator Developer Tester)
 
   def change
